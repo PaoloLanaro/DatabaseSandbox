@@ -1,0 +1,20 @@
+
+DROP DATABASE IF EXISTS HuskyGram;
+CREATE DATABASE IF NOT EXISTS HuskyGram;
+
+USE HuskyGram;
+
+CREATE TABLE IF NOT EXISTS users
+(
+	id INT PRIMARY KEY,
+	created_at DATETIME,
+	username VARCHAR(255) UNIQUE NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS follows
+(
+	follower_id INT PRIMARY KEY,
+	followee_id INT,
+);
+
+	
