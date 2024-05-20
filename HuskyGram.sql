@@ -14,7 +14,8 @@ CREATE TABLE IF NOT EXISTS users
 
 INSERT INTO users (id, created_at, username)
 VALUES (123, NOW(), 'justywusty'),
-       (234, NOW(), 'Aahil the KFC demolisher');
+       (234, NOW(), 'Aahil the KFC demolisher'),
+       (1, NOW(), 'Michaelo');
 
 DROP TABLE IF EXISTS follows;
 
@@ -51,7 +52,9 @@ CREATE TABLE IF NOT EXISTS photos
 
 INSERT INTO photos (id, created_at, user_id, image_url)
 VALUES (1, NOW(), 123, 'hello.png'),
-       (2, NOW(), 123, 'goodbye.png');
+       (2, NOW(), 123, 'goodbye.png'),
+       (3, NOW(), 1, 'picture-of-justin.jpg'),
+       (4, NOW(), 1, 'other-picture,png');
 
 DROP TABLE IF EXISTS tags;
 
@@ -106,7 +109,9 @@ CREATE TABLE IF NOT EXISTS comments
 
 INSERT INTO comments (id, created_at, photo_id, user_id, comment_text)
 VALUES (1, NOW(), 1, 234, 'I like university'),
-       (2, NOW(), 2, 123, 'this sucks: COLLEGE. Especially NEU');
+       (2, NOW(), 2, 123, 'this sucks: COLLEGE. Especially NEU'),
+       (3, NOW(), 3, 123, 'I hate you Michael'),
+       (4, NOW(), 3, 123, 'I hate you so much!');
 
 DROP TABLE IF EXISTS likes;
 
